@@ -42,9 +42,10 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip setuptools wheel
-    pip install -r requirements.txt
+    cd src/
+    pip install -r requirements.txt -r requirements/dev.txt
     pip install unittest-xml-reporting
-  displayName: 'Install prerequisites'
+  displayName: 'Install prerequisites
 
 - script: |
     pushd '$(projectRoot)'
